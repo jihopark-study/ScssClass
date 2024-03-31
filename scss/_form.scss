@@ -1,0 +1,13 @@
+// extend는 %로 작성한다.
+input:not([type="checkbox"], [type="radio"]) {
+  @extend %form;
+  //점수 체계 때문에 mixin이나 extend는 가장 위에 작성한다.
+}
+select{
+  // 화살표 디자인 넣고, 
+  @extend %form;
+}
+textarea{
+  height: 100px;
+  @extend %form;
+}

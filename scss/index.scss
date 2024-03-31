@@ -1,0 +1,15 @@
+@import 'var'; //변수정의
+@import 'mixin'; //mixin
+@import 'extend'; //extend
+@import 'reset'; //리셋
+@import 'text'; //텍스트정의
+@import 'space'; //여백정의
+@import 'badge'; //뱃지
+@import 'card'; //카드
+@import 'form'; //온라인서식
+@import 'main' //첫페이지
+// import 순서 중요!
+// 같은 파일 안에 있으면 경로 안넣어도 된다.
+// 사스끼리 연결은 확장자 없어도 된다.
+
+// 다트 사스는 임포트 지원 X

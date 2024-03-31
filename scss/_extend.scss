@@ -1,0 +1,7 @@
+//점수 체계 때문에 mixin이나 extend는 가장 위에 작성한다.
+%form {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  color: darkgray;
+  min-height: 30px;
+}

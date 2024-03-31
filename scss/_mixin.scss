@@ -1,0 +1,64 @@
+// 믹스인 정의
+  // @mixin 믹스인이름(매개변수) {
+  //   // CSS
+  // }
+
+// 믹스인 실행
+  // @include 믹스인이름(인수);
+
+  // background: url() no-repeat 좌표 색상;
+  // background: url() no-repeat 좌표 배경이미지크기 색상;
+
+  // background: url() no-repeat 좌표 색상;
+  // background-size: 배경이미지 크기;
+
+
+  @mixin background($image, $coordinate:null, $color:null, $size:null) {
+    //믹스인은 대부분 선택자 없다. 
+    //믹스인은 리턴이 없다. 
+    background: url(#{$imgUrl}#{$image}) no-repeat $coordinate $color;
+    background-size: $size;
+  }
+
+
+  // @include background('ico.svg', right 20px bottom 20px, $green09, 20px auto);
+  // 좌표 값이 없으면 0 0 이라도 넣어야함
+  // 쉼표 구분으로 인수가 들어가기 때문에 띄어쓰기 상관X
+  
+ @mixin box($borderColor, $radius, $padding, $shadow: null) {
+  border: 1px solid $borderColor;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: $shadow;
+ }
+  
+//  @mixin box2($borderColor, $radius, $padding, $shadow: null) {
+//   border: 1px solid map-get($boxDesign , 1, borderColor );
+//   border-radius: map-get($boxDesign, 1, radius );
+//   padding: map-get($boxDesign, 1, padding );
+//   box-shadow: map-get($boxDesign, 1, shadow );
+//  }
+  
+ @mixin box2($map, $firstKey) {
+  border: 1px solid map-get($boxDesign , $firstKey, borderColor );
+  border-radius: map-get($boxDesign, $firstKey, radius );
+  padding: map-get($boxDesign, $firstKey, padding );
+  box-shadow: map-get($boxDesign, $firstKey, shadow );
+ }
+
+
+ $mobileSize : 768px;
+ $tableteSize : 1024px;
+
+ @mixin mobile {
+  // 반응형 인클루드는 속성 밑으로 간다
+   @media (width < $mobileSize ) {
+    @content; // => 특정 범위 안에 있는 자식으로 간주, 
+   }
+ }
+
+ @mixin tablet {
+   @media (width < $tableteSize ) {
+    @content; // => 특정 범위 안에 있는 자식으로 간주, 
+   }
+ }

@@ -1,0 +1,49 @@
+// 파일명에 언더바를 넣으면 컴파일이 안된다
+// 모든 변수는 $로
+// 사스에서는 문자열을 쓸 때 콜론없이 그냥 작성해도 된다.
+// $noto : notoSansKR ;
+// $red: red;
+// $fs20 : 20px;
+// $space: 100px;
+// $mt100 : $space;
+// $pt100 : $space;
+
+
+// div{
+//   $blue: blue;
+//   margin-top:$mt100;
+//   padding-top:$mt100;
+//   color: $red;
+//   font-size: $fs20;
+//   padding: $fs20;
+// }
+
+// p{
+//   $blue: blue;
+//   color: $blue;
+//   font-size: $fs20;
+// }
+
+
+
+$black1e : #1e2530;
+$white : #fff;
+$green09 : #09E27C;
+$yellowff : #FFDC20;
+$blue00 : #00D4EA;
+$grayca : #CACACA;
+
+$radius38 : 38px;
+$radius22 : 22px;
+$imgUrl : '../images/';
+// $imgIco : '../images/ico/';
+
+$yellow : yellow;
+$bc: background-color;
+
+
+
+
+// 문자보간 쓰는 경우
+// 값사이에
+// 속성정의
